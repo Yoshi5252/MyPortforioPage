@@ -1,0 +1,66 @@
+/* ===================================================
+   global.css — CSS変数・リセット・共通スタイル
+   =================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------
+   テーマカラーの定義
+   ここでサイト全体の色を一元管理する。
+   変更したい場合はこのブロックを編集すればOK。
+   --------------------------------------------------- */
+:root {
+  --bg-primary: #0a0a0a;     /* メイン背景色 */
+  --bg-secondary: #111111;   /* カード・セクションの背景色 */
+  --bg-hover: #1a1a1a;       /* ホバー時の背景色 */
+  --text-primary: #f0f0f0;   /* メインテキスト色 */
+  --text-muted: #888888;     /* サブテキスト・補足色 */
+  --border: #2a2a2a;         /* ボーダー色 */
+  --accent: #e0e0e0;         /* アクセントカラー（白寄りグレー）。好みで #00bcd4 など変更可 */
+}
+
+/* ---------------------------------------------------
+   ベーススタイル
+   --------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------
+   共通ユーティリティ
+   --------------------------------------------------- */
+
+/* セクション共通の縦余白 */
+.section {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* アクセントカラーのアンダーライン付きリンク */
+.link-accent {
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.link-accent:hover {
+  border-color: var(--accent);
+}
