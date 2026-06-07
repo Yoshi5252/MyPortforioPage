@@ -1,9 +1,10 @@
 // Header.tsx — サイト上部のナビゲーションバー
 // 全ページで共通表示される。アクティブなリンクをハイライトする。
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 export default function Header() {
+  const location = useLocation()
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `text-sm tracking-widest uppercase transition-colors duration-200 ${
       isActive

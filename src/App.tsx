@@ -1,7 +1,8 @@
 // ルーティング設定
 // ページを追加する場合はここに <Route> を追記する
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// GitHub Pages（サブパス配信）でリロードやサブページ直アクセスでも壊れないよう HashRouter を使用
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -13,7 +14,7 @@ import Awards from './pages/works/Awards'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="flex flex-col min-h-screen">
         {/* 全ページ共通のヘッダー */}
         <Header />
@@ -34,6 +35,6 @@ export default function App() {
         {/* 全ページ共通のフッター */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
