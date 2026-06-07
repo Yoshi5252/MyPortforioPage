@@ -30,12 +30,14 @@ export default function Profile() {
           </div>
 
           {/* ここに実際の名前を入れる */}
-          <h1 className="text-2xl font-semibold mb-1">Your Name</h1>
+          <h1 className="text-2xl font-semibold mb-1">吉田 有輝</h1>
 
-          {/* ここに所属・肩書きを入れる */}
-          <p className="text-sm mb-6" style={{ color: 'var(--text-muted)' }}>
-            所属 / 大学名 or 会社名
-          </p>
+          {/* 所属・肩書き — 増やす場合はここに追加 */}
+          <ul className="flex flex-col gap-1 text-sm mb-6" style={{ color: 'var(--text-muted)' }}>
+            <li>岐阜大学 工学部 電気電子・情報工学科 情報コース</li>
+            <li>岐阜大学起業部 2025年度副部長</li>
+            {/* <li>所属3</li> */}
+          </ul>
 
           {/* SNS・GitHubリンク — ここに実際のURLを入れる */}
           <ul className="flex flex-col gap-2 text-sm">

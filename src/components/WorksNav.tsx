@@ -18,6 +18,7 @@ export default function WorksNav() {
     >
       <NavLink to="/works/photo" className={tabClass}>Photo</NavLink>
       <NavLink to="/works/engineering" className={tabClass}>Engineering</NavLink>
+      <NavLink to="/works/awards" className={tabClass}>Awards</NavLink>
     </nav>
   )
 }

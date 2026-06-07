@@ -19,13 +19,12 @@ export default function Header() {
       <nav className="max-w-[900px] mx-auto px-6 py-4 flex items-center justify-between">
         {/* サイトロゴ／名前 — ここを自分の名前に変更 */}
         <NavLink to="/" className="text-sm font-semibold tracking-widest uppercase text-[var(--accent)]">
-          YourName
+          Yuki Yoshida
         </NavLink>
 
         {/* ナビゲーションリンク */}
         <ul className="flex gap-8 list-none">
           <li><NavLink to="/" end className={linkClass}>Home</NavLink></li>
-          <li><NavLink to="/profile" className={linkClass}>Profile</NavLink></li>
           <li>
             {/* Works はサブページがあるので /works/* でアクティブ判定 */}
             <NavLink
@@ -37,6 +36,7 @@ export default function Header() {
               Works
             </NavLink>
           </li>
+          <li><NavLink to="/profile" className={linkClass}>Profile</NavLink></li>
         </ul>
       </nav>
     </header>

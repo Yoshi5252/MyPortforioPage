@@ -8,6 +8,8 @@ import Home from './pages/Home'
 import Profile from './pages/Profile'
 import Photo from './pages/works/Photo'
 import Engineering from './pages/works/Engineering'
+import EngineeringDetail from './pages/works/EngineeringDetail'
+import Awards from './pages/works/Awards'
 
 export default function App() {
   return (
@@ -23,6 +25,8 @@ export default function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/works/photo" element={<Photo />} />
             <Route path="/works/engineering" element={<Engineering />} />
+            <Route path="/works/engineering/:projectId" element={<EngineeringDetail />} />
+            <Route path="/works/awards" element={<Awards />} />
             {/* 404ページが必要な場合はここに <Route path="*" element={<NotFound />} /> を追加 */}
           </Routes>
         </main>

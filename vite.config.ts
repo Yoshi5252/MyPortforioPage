@@ -6,5 +6,5 @@ import react from '@vitejs/plugin-react'
 // ローカル開発・カスタムドメイン運用時は './' のままでOK
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/MyPortforioPage/',
 })

@@ -8,7 +8,7 @@ export default function Footer() {
       style={{ borderColor: 'var(--border)', color: 'var(--text-muted)' }}
     >
       {/* ここを自分の名前・年に変更 */}
-      <p>© 2026 YourName. All rights reserved.</p>
+      <p>© 2026 Yuki Yoshida. All rights reserved.</p>
     </footer>
   )
 }
