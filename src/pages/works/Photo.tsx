@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import WorksNav from '../../components/WorksNav'
+import { assetUrl } from '../../utils/assetUrl'
 
 type PhotoItem = { id: number; src: string; alt: string }
 type Series   = { id: number; title: string; comment: string; photos: PhotoItem[] }
@@ -31,7 +32,7 @@ const series: Series[] = [
   {
     id: 3,
     title: 'Ordinary',
-    comment: '3つ目の組み写真のコメント。',
+    comment: '',
     photos: [
       { id: 1, src: '/photos/series3/1-_DSC1756.jpg', alt: '写真1' },
       { id: 2, src: '/photos/series3/2-_DSC4068.jpg', alt: '写真2' },
@@ -157,12 +158,12 @@ export default function Photo() {
     photos.map(photo => (
       <img
         key={photo.src}
-        src={photo.src}
+        src={assetUrl(photo.src)}
         alt={photo.alt}
         style={{ height: h, width: (arMap[photo.src] ?? 1.5) * h, flexShrink: 0 }}
         className="cursor-pointer block"
         onLoad={e => onLoad(photo.src, e)}
-        onClick={() => setLightbox(photo.src)}
+        onClick={() => setLightbox(assetUrl(photo.src))}
       />
     ))
 

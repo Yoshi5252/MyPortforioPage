@@ -3,6 +3,7 @@
 
 import { useState } from 'react'
 import WorksNav from '../../components/WorksNav'
+import { assetUrl } from '../../utils/assetUrl'
 
 type Award = {
   type: '受賞' | '出場' | '応募'
@@ -158,8 +159,8 @@ function AwardRow({ a, onOpen }: { a: Award; onOpen: (src: string) => void }) {
         <div className="shrink-0 w-24 h-16 overflow-hidden flex items-center justify-center"
           style={{ backgroundColor: 'var(--bg-secondary)' }}>
           {a.image
-            ? <img src={a.image} alt={a.work ?? a.contest} className="w-full h-full object-cover cursor-pointer"
-                onClick={() => onOpen(a.image!)} />
+            ? <img src={assetUrl(a.image)} alt={a.work ?? a.contest} className="w-full h-full object-cover cursor-pointer"
+                onClick={() => onOpen(assetUrl(a.image!))} />
             : <span className="text-xs" style={{ color: 'var(--text-muted)' }}>No Image</span>
           }
         </div>

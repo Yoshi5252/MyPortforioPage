@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import WorksNav from '../../components/WorksNav'
 import { projects } from '../../data/projects'
+import { assetUrl } from '../../utils/assetUrl'
 
 export default function EngineeringDetail() {
   const { projectId } = useParams<{ projectId: string }>()
@@ -79,7 +80,7 @@ export default function EngineeringDetail() {
 
               <div className="flex-1 aspect-video overflow-hidden">
                 <img
-                  src={images[current]}
+                  src={assetUrl(images[current])}
                   alt={`${project.title} ${current + 1}`}
                   className="w-full h-full object-cover"
                 />
@@ -103,7 +104,7 @@ export default function EngineeringDetail() {
                   className="w-14 aspect-video overflow-hidden transition-opacity"
                   style={{ opacity: i === current ? 1 : 0.4 }}
                 >
-                  <img src={src} alt={`thumb ${i + 1}`} className="w-full h-full object-cover" />
+                  <img src={assetUrl(src)} alt={`thumb ${i + 1}`} className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>

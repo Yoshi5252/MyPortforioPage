@@ -4,6 +4,7 @@
 import { Link } from 'react-router-dom'
 import WorksNav from '../../components/WorksNav'
 import { projects } from '../../data/projects'
+import { assetUrl } from '../../utils/assetUrl'
 
 export default function Engineering() {
   return (
@@ -35,7 +36,7 @@ export default function Engineering() {
               </p>
               {project.images && project.images.length > 0 && (
                 <img
-                  src={project.images[0]}
+                  src={assetUrl(project.images[0])}
                   alt={project.title}
                   className="h-24 w-auto object-contain self-start shrink-0"
                 />

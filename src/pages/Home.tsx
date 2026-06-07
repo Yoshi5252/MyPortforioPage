@@ -2,6 +2,7 @@
 // キャッチコピー・自己紹介・各ページへのナビゲーションを表示する。
 
 import { Link } from 'react-router-dom'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       {/* 背景写真 — うっすら表示 */}
       <div
         className="absolute inset-0 bg-cover bg-center pointer-events-none"
-        style={{ backgroundImage: 'url(/bg-home.jpg)', opacity: 0.18 }}
+        style={{ backgroundImage: `url(${assetUrl('/bg-home.jpg')})`, opacity: 0.18 }}
       />
 
       <div className="section relative flex flex-col justify-center min-h-[80vh]">
