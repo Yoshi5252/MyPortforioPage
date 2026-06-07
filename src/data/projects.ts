@@ -26,10 +26,10 @@ export const projects: Project[] = [
     demo: '',
     period: '2026.05',
     images: [
-      '/public/engineering/project-POV/1-_DSC4408.jpg',
-      '/public/engineering/project-POV/3-_DSC4403.jpg',
-      '/public/engineering/project-POV/4-_DSC4401.jpg',
-      '/public/engineering/project-POV/2-_DSC4407.jpg',
+      '/engineering/project-POV/1-_DSC4408.jpg',
+      '/engineering/project-POV/3-_DSC4403.jpg',
+      '/engineering/project-POV/4-_DSC4401.jpg',
+      '/engineering/project-POV/2-_DSC4407.jpg',
     ],
   },
   {
@@ -41,8 +41,8 @@ export const projects: Project[] = [
     github: '',
     period: '2025.09',
         images: [
-      '/public/engineering/project-beta/ES_1.png',
-      '/public/engineering/project-beta/ES_2.png',
+      '/engineering/project-beta/ES_1.png',
+      '/engineering/project-beta/ES_2.png',
     ],
   },
   {
