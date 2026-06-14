@@ -1,16 +1,9 @@
 // Profile.tsx — プロフィールページ ( /profile )
 // 名前・所属・スキル・SNSリンクを表示する。
 
-export default function Profile() {
-  // ここに実際のスキルリストを入れる
-  const skills = [
-    'TypeScript / JavaScript',
-    'React / Next.js',
-    'Python',
-    'Photography',
-    // 追加スキルをここに書く
-  ]
+import { assetUrl } from '../utils/assetUrl'
 
+export default function Profile() {
   return (
     <div className="section">
       <h2 className="text-xs tracking-[0.3em] uppercase mb-10" style={{ color: 'var(--text-muted)' }}>
@@ -21,77 +14,35 @@ export default function Profile() {
 
         {/* 左カラム: 名前・所属 */}
         <div>
-          {/* ここに実際のアイコン画像を入れる。現在はプレースホルダー */}
-          <div
-            className="w-24 h-24 rounded-full mb-6 flex items-center justify-center text-2xl"
-            style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-muted)' }}
-          >
-            ?
-          </div>
+          {/* アイコン画像 */}
+          <img
+            src={assetUrl('/profile.jpg')}
+            alt="吉田 有輝"
+            className="w-24 h-24 rounded-full mb-6 object-cover"
+            style={{ backgroundColor: 'var(--bg-secondary)' }}
+          />
 
           {/* ここに実際の名前を入れる */}
           <h1 className="text-2xl font-semibold mb-1">吉田 有輝</h1>
 
           {/* 所属・肩書き — 増やす場合はここに追加 */}
-          <ul className="flex flex-col gap-1 text-sm mb-6" style={{ color: 'var(--text-muted)' }}>
+          <ul className="flex flex-col gap-1 text-sm" style={{ color: 'var(--text-muted)' }}>
             <li>岐阜大学 工学部 電気電子・情報工学科 情報コース</li>
             <li>岐阜大学起業部 2025年度副部長</li>
-            {/* <li>所属3</li> */}
-          </ul>
-
-          {/* SNS・GitHubリンク — ここに実際のURLを入れる */}
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>
-              <a
-                href="https://github.com/your-username"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-accent"
-              >
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/your-username"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-accent"
-              >
-                Twitter / X
-              </a>
-            </li>
-            {/* 他のSNSはここに追加 */}
           </ul>
         </div>
 
-        {/* 右カラム: スキルセット */}
+        {/* 右カラム: 自己紹介 */}
         <div>
           <h3 className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--text-muted)' }}>
-            Skills
+            About
           </h3>
-          <ul className="flex flex-col gap-2">
-            {skills.map((skill) => (
-              <li
-                key={skill}
-                className="text-sm py-2 border-b"
-                style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
-              >
-                {skill}
-              </li>
-            ))}
-          </ul>
-
-          {/* 自己紹介テキスト — ここに詳しいプロフィール文を入れる */}
-          <div className="mt-10">
-            <h3 className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: 'var(--text-muted)' }}>
-              About
-            </h3>
-            <p className="text-sm leading-loose" style={{ color: 'var(--text-primary)' }}>
-              ここに自己紹介文を入れる。趣味・経歴・興味のある分野など、自由に書いてください。
-              複数段落に分けたい場合は &lt;p&gt; タグを複数使う。
-            </p>
-          </div>
+          <p className="text-sm leading-loose" style={{ color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>
+            {`趣味：写真撮影・電子工作・プログラミング・旅
+興味分野：HCI・メディアアート
+中学生の頃から写真撮影を始め、高校では写真部に所属しました。
+2025年大阪・関西万博へ10回行きました。`}
+          </p>
         </div>
       </div>
     </div>

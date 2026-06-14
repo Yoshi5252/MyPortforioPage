@@ -125,18 +125,9 @@ export default function EngineeringDetail() {
         ))}
       </div>
 
-      {/* リンク */}
-      <div className="flex gap-6">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm tracking-widest uppercase link-accent"
-        >
-          GitHub →
-        </a>
-        {/* デモリンク（設定している場合のみ表示） */}
-        {project.demo && (
+      {/* デモリンク（設定している場合のみ表示） */}
+      {project.demo && (
+        <div className="flex gap-6">
           <a
             href={project.demo}
             target="_blank"
@@ -145,8 +136,8 @@ export default function EngineeringDetail() {
           >
             Demo →
           </a>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }

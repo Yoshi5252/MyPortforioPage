@@ -7,7 +7,6 @@ export type Project = {
   summary: string      // 一覧ページに表示する短い概要
   description: string  // 詳細ページに表示する長い説明
   tags: string[]       // 使用技術タグ
-  github: string       // GitHubリンク（仮URL）
   demo?: string        // デモサイトURL（任意）
   period?: string      // 制作期間（任意）
   images?: string[]    // 詳細ページのスクリーンショット（例: '/engineering/project-id/01.jpg'）
@@ -20,9 +19,8 @@ export const projects: Project[] = [
     title: 'Persistence of Vision',
     summary: '残像を利用したディスプレイ',
     description:
-      '光は積分され、実態があるように振る舞う。それはデジタルとアナログの境界を越えるようなことである。',
+      '光は積分され、実態があるように振る舞う。',
     tags: ['Arduino', 'Python'],
-    github: '',
     demo: '',
     period: '2026.05',
     images: [
@@ -38,19 +36,11 @@ export const projects: Project[] = [
     summary: 'メーテレハッカソン Electric Sheep 2025 で制作したプロジェクト',
     description: '',
     tags: ['Arduino'],
-    github: '',
     period: '2025.09',
         images: [
       '/engineering/project-beta/ES_1.png',
       '/engineering/project-beta/ES_2.png',
     ],
   },
-  {
-    id: 'project-gamma',
-    title: 'Project Gamma',
-    summary: 'もう一つのプロジェクト概要。',
-    description: '詳細説明をここに書く。',
-    tags: ['Next.js', 'Tailwind CSS'],
-    github: 'https://github.com/your-username/project-gamma',
-  },
+
 ]

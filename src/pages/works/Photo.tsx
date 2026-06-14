@@ -11,7 +11,7 @@ type Series   = { id: number; title: string; comment: string; photos: PhotoItem[
 const series: Series[] = [
   {
     id: 1,
-    title: 'Each Story',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series1/1-MG_0173.jpg',  alt: '写真1' },
@@ -21,7 +21,7 @@ const series: Series[] = [
   },
   {
     id: 2,
-    title: 'Fluid',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series2/1-_DSC3448.jpg', alt: '写真1' },
@@ -31,7 +31,7 @@ const series: Series[] = [
   },
   {
     id: 3,
-    title: 'Ordinary',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series3/1-_DSC1756.jpg', alt: '写真1' },
@@ -41,7 +41,7 @@ const series: Series[] = [
   },
   {
     id: 4,
-    title: 'Silence',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series4/1-IMG_3580.jpg',  alt: '写真1' },
@@ -51,7 +51,7 @@ const series: Series[] = [
   },
   {
     id: 5,
-    title: 'Real or Not',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series5/1-IMG_0747.jpg',  alt: '写真1' },
@@ -63,7 +63,7 @@ const series: Series[] = [
   },
   {
     id: 6,
-    title: 'Quiet Light',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series6/1-IMG_0239.jpg', alt: '写真1' },
@@ -76,7 +76,7 @@ const series: Series[] = [
   },
   {
     id: 7,
-    title: 'Quiet Light',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series7/1-IMG_0237.jpg', alt: '写真1' },
@@ -88,7 +88,7 @@ const series: Series[] = [
   },
   {
     id: 8,
-    title: '消えゆく',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series8/1-_DSC4127.jpg', alt: '写真1' },
@@ -98,7 +98,7 @@ const series: Series[] = [
   },
   {
     id: 9,
-    title: '住まう',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series9/1-_DSC4295.jpg', alt: '写真1' },
@@ -108,7 +108,7 @@ const series: Series[] = [
   },
   {
     id: 10,
-    title: '境界',
+    title: '',
     comment: '',
     photos: [
       { id: 1, src: '/photos/series10/1-_DSC0774.jpg', alt: '写真1' },
